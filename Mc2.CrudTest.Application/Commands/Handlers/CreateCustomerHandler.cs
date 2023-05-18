@@ -25,11 +25,8 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
         public async Task HandleAsync(CreateCustomer command)
         {
             //TODO check if customer is unique
-            var customerSpec= _repository.FindByEmailAsync(command.Email);
-            if (customerSpec != null)
-            {
-                throw new EmailIsAlreadyExists(command.Email);
-            }
+            //TODO check if email is exsist
+           
             var Customer = _factory.Create(command.Id,command.Name,command.LastName,command.DateOfBirth,command.PhoneNumber,command.Email,command.BankAccountNumber);
 
             await _repository.AddAsync(Customer);
