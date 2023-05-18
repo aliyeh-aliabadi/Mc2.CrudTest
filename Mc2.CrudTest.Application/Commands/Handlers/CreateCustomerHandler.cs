@@ -1,4 +1,5 @@
 ﻿using Mc2.CrudTest.Application.Exceptions;
+using Mc2.CrudTest.Application.Services;
 using Mc2.CrudTest.Domain.Factories;
 using Mc2.CrudTest.Domain.Repositories;
 using Mc2.CrudTest.Shared.Abstractions.Commands;
@@ -16,18 +17,27 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
     {
         private readonly ICustomerRepository _repository;
         private readonly ICustomerFactory _factory;
+        private readonly ICustomerReadService _readService;
 
-        public CreateCustomerHandler(ICustomerRepository repository, ICustomerFactory factory)
+        public CreateCustomerHandler(ICustomerRepository repository, ICustomerFactory factory,
+            ICustomerReadService readService)
         {
-                _repository = repository;
+            _repository = repository;
             _factory = factory;
+            _readService = readService;
         }
         public async Task HandleAsync(CreateCustomer command)
-        {
-            //TODO check if customer is unique
-            //TODO check if email is exsist
-           
-            var Customer = _factory.Create(command.Id,command.Name,command.LastName,command.DateOfBirth,command.PhoneNumber,command.Email,command.BankAccountNumber);
+        { 
+            if (await _readService.ExistsByEmailAsync(command.Email))
+            {
+                throw new EmailAlreadyExists(command.Email);
+            }
+            if (await _readService.ExistsByNAmeLastNameDateOfBirthAsync(command.Name,command.LastName,command.DateOfBirth))
+            {
+                throw new CustomerAlreadyExists(string.Concat(command.Name,command.LastName));
+            }
+
+            var Customer = _factory.Create(command.Id, command.Name, command.LastName, command.DateOfBirth, command.PhoneNumber, command.Email, command.BankAccountNumber);
 
             await _repository.AddAsync(Customer);
         }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Mc2.CrudTest.Application.Exceptions
 {
-    public class EmailIsAlreadyExists : CustomerException
+    public class EmailAlreadyExists : CustomerException
     {
         public string Email { get; }
 
-        public EmailIsAlreadyExists(string email) : base($"Customer with Email '{email}' is already exists.")
+        public EmailAlreadyExists(string email) : base($"Customer with Email '{email}' is already exists.")
             => Email = email;
     }
 }
