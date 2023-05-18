@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mc2.CrudTest.AcceptanceTests", "Mc2.CrudTest.AcceptanceTests\Mc2.CrudTest.AcceptanceTests.csproj", "{6776DF76-1054-486C-A79A-57100C47032F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Domain", "Mc2.CrudTest.Domain\Mc2.CrudTest.Domain.csproj", "{C84CE8D2-B444-49A5-B20C-DD54F753A0BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4940A0F6-CA18-4D8D-91A7-9CBD2A1A67C5}"
@@ -19,16 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Shared", "Mc2.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.CrudTest.Infrastructure", "Mc2.CrudTest.Infrastructure\Mc2.CrudTest.Infrastructure.csproj", "{7F2366F1-C146-4B82-88CA-1A893290BFFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mc2.TestCrud.UnitTest", "Mc2.TestCrud.UnitTest\Mc2.TestCrud.UnitTest.csproj", "{9BC9E94A-9007-409C-81DD-C887E97B69A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6776DF76-1054-486C-A79A-57100C47032F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6776DF76-1054-486C-A79A-57100C47032F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6776DF76-1054-486C-A79A-57100C47032F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6776DF76-1054-486C-A79A-57100C47032F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C84CE8D2-B444-49A5-B20C-DD54F753A0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C84CE8D2-B444-49A5-B20C-DD54F753A0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C84CE8D2-B444-49A5-B20C-DD54F753A0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{7F2366F1-C146-4B82-88CA-1A893290BFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F2366F1-C146-4B82-88CA-1A893290BFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F2366F1-C146-4B82-88CA-1A893290BFFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC9E94A-9007-409C-81DD-C887E97B69A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC9E94A-9007-409C-81DD-C887E97B69A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC9E94A-9007-409C-81DD-C887E97B69A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC9E94A-9007-409C-81DD-C887E97B69A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
