@@ -8,6 +8,7 @@ namespace Mc2.CrudTest.Infrastructure.EF.Models
 {
     public class CustomerModel
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
