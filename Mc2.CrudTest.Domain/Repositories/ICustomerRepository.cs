@@ -14,5 +14,6 @@ namespace Mc2.CrudTest.Domain.Repositories
         Task AddAsync(Customer customer);
         Task UpdateAsync(Customer customer);
         Task DeleteAsync(Customer customer);
+        Task<Customer> FindByEmailAsync(string email);
     }
 }
