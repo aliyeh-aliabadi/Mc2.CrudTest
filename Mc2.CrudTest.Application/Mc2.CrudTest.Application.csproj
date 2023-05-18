@@ -7,11 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="Dto\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Services\" />
     <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mc2.CrudTest.Shared.Abstractions\Mc2.CrudTest.Shared.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
