@@ -1,7 +1,14 @@
+using Microsoft.Extensions.Configuration;
+using Mc2.CrudTest.Shared;
+using Mc2.CrudTest.Application;
+using Mc2.CrudTest.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
-
+ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
-
+builder.Services.AddShared();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
