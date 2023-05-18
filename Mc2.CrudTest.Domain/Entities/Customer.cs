@@ -22,7 +22,7 @@ namespace Mc2.CrudTest.Domain.Entities
            CustomerFirstName name,
            CustomerLastName lastName,
            CustomerDateOfBirth dateOfBirth,
-           CustomerPhoneNumber customerPhoneNumber,
+           CustomerPhoneNumber phoneNumber,
            CustomerEmail email,
            CustomerBankAccountNumber bankAccountNumber)
         {
@@ -30,7 +30,7 @@ namespace Mc2.CrudTest.Domain.Entities
             _name = name;
             _lastName = lastName;
             _dateOfBirth = dateOfBirth;
-            _phoneNumber = customerPhoneNumber;
+            _phoneNumber = phoneNumber;
             _email = email;
             _bankAccountNumber = bankAccountNumber;
         }

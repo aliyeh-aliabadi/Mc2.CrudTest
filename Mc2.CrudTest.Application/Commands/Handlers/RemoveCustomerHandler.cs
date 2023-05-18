@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mc2.CrudTest.Application.Commands.Handlers
 {
-    internal sealed class RemoveCustomerHandler : ICommandHandler<RemoveCustomer>
+   public class RemoveCustomerHandler : ICommandHandler<RemoveCustomer>
     {
         private readonly ICustomerRepository _repository;
 
@@ -20,7 +20,7 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
         {
             var Customer = await _repository.GetAsync(command.Id);
 
-            if (Customer is null)
+            if (Customer is not null)
             {
                 throw new CustomerNotFound(command.Id);
             }
