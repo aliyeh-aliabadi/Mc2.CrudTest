@@ -19,5 +19,10 @@ namespace Mc2.CrudTest.Domain.ValueObjects
             }
             Value = value;
         }
+        public static implicit operator Guid(CustomerId id)
+  => id.Value;
+
+        public static implicit operator CustomerId(Guid id)
+            => new(id);
     }
 }
