@@ -42,7 +42,7 @@ namespace Mc2.CrudTest.Infrastructure.EF.Config
             builder
                 .Property(typeof(CustomerFirstName), "_name")
                 .HasConversion(nameConverter)
-                .HasColumnName("FirstName");
+                .HasColumnName("Name");
             builder
                 .Property(typeof(CustomerLastName), "_lastName")
                 .HasConversion(lastNameConverter)
@@ -54,7 +54,7 @@ namespace Mc2.CrudTest.Infrastructure.EF.Config
             builder
                 .Property(typeof(CustomerPhoneNumber), "_phoneNumber")
                  .HasConversion(phoneConverter)
-                .HasColumnName("CustomerPhoneNumber");
+                .HasColumnName("PhoneNumber");
             builder
                 .Property(typeof(CustomerEmail), "_email")
                 .HasConversion(emailConverter)

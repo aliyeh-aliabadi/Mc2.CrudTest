@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Mc2.CrudTest.Infrastructure.EF.Migrations
+namespace Mc2.CrudTest.Infrastructure.Ef.Migrations
 {
     [DbContext(typeof(ReadDbContext))]
-    [Migration("20230524065231_Init_read")]
+    [Migration("20230524080632_Init_read")]
     partial class Init_read
     {
         /// <inheritdoc />
@@ -31,7 +31,7 @@ namespace Mc2.CrudTest.Infrastructure.EF.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("BankAccountNumber")
+                    b.Property<string>("BankAccount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

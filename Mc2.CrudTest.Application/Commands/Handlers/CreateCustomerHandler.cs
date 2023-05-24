@@ -37,7 +37,7 @@ namespace Mc2.CrudTest.Application.Commands.Handlers
                 throw new CustomerAlreadyExists(string.Concat(command.Name,command.LastName));
             }
 
-            var Customer = _factory.Create(command.Id, command.Name, command.LastName, command.DateOfBirth, command.PhoneNumber, command.Email, command.BankAccountNumber);
+            var Customer = _factory.Create(command.Id, command.Name, command.LastName, command.DateOfBirth, command.PhoneNumber, command.Email, command.BankAccount);
 
             await _repository.AddAsync(Customer);
         }

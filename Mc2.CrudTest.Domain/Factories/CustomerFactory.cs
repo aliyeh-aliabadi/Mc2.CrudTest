@@ -11,7 +11,7 @@ namespace Mc2.CrudTest.Domain.Factories
     public sealed class CustomerFactory : ICustomerFactory
     {
         public Customer Create(CustomerId id, CustomerFirstName name, CustomerLastName lastName, CustomerDateOfBirth dateOfBirth, 
-            CustomerPhoneNumber phoneNumber, CustomerEmail email, CustomerBankAccount bankAccountNumber)
-        => new (id,name,lastName,dateOfBirth,phoneNumber,email,bankAccountNumber);
+            CustomerPhoneNumber phoneNumber, CustomerEmail email, CustomerBankAccount bankAccount)
+        => new (id,name,lastName,dateOfBirth,phoneNumber,email,bankAccount);
     }
 }

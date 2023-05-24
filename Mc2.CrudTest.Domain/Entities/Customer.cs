@@ -24,7 +24,7 @@ namespace Mc2.CrudTest.Domain.Entities
            CustomerDateOfBirth dateOfBirth,
            CustomerPhoneNumber phoneNumber,
            CustomerEmail email,
-           CustomerBankAccount bankAccountNumber)
+           CustomerBankAccount bankAccount)
         {
             Id = id;
             _name = name;
@@ -32,7 +32,7 @@ namespace Mc2.CrudTest.Domain.Entities
             _dateOfBirth = dateOfBirth;
             _phoneNumber = phoneNumber;
             _email = email;
-            _bankAccount = bankAccountNumber;
+            _bankAccount = bankAccount;
         }
         public Customer() { }
     }

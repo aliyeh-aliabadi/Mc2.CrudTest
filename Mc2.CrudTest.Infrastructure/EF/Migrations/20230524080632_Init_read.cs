@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Mc2.CrudTest.Infrastructure.EF.Migrations
+namespace Mc2.CrudTest.Infrastructure.Ef.Migrations
 {
     /// <inheritdoc />
     public partial class Init_read : Migration
@@ -21,7 +21,7 @@ namespace Mc2.CrudTest.Infrastructure.EF.Migrations
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BankAccountNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    BankAccount = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

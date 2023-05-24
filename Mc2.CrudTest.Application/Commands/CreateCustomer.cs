@@ -9,5 +9,5 @@ using System.Threading.Tasks;
 namespace Mc2.CrudTest.Application.Commands
 {
     public record CreateCustomer(Guid Id, string Name, string LastName, DateTime DateOfBirth, string PhoneNumber,
-     string Email, string BankAccountNumber) : ICommand;
+     string Email, string BankAccount) : ICommand;
 }

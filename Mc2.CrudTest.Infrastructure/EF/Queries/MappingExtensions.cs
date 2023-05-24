@@ -17,7 +17,7 @@ namespace Mc2.CrudTest.Infrastructure.EF.Queries
               Name = readModel.Name,
               LastName = readModel.LastName,
               DateOfBirth = readModel.DateOfBirth,
-              BankAccountNumber = readModel.BankAccountNumber,
+              BankAccount = readModel.BankAccount,
               Email = readModel.Email,
               PhoneNumber = readModel.PhoneNumber
           };
