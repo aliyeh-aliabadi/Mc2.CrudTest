@@ -16,7 +16,7 @@ namespace Mc2.CrudTest.Domain.Entities
         private CustomerDateOfBirth _dateOfBirth;
         private CustomerPhoneNumber _phoneNumber;
         private CustomerEmail _email;
-        private CustomerBankAccountNumber _bankAccountNumber;
+        private CustomerBankAccount _bankAccount;
 
         internal Customer(CustomerId id,
            CustomerFirstName name,
@@ -24,7 +24,7 @@ namespace Mc2.CrudTest.Domain.Entities
            CustomerDateOfBirth dateOfBirth,
            CustomerPhoneNumber phoneNumber,
            CustomerEmail email,
-           CustomerBankAccountNumber bankAccountNumber)
+           CustomerBankAccount bankAccountNumber)
         {
             Id = id;
             _name = name;
@@ -32,7 +32,7 @@ namespace Mc2.CrudTest.Domain.Entities
             _dateOfBirth = dateOfBirth;
             _phoneNumber = phoneNumber;
             _email = email;
-            _bankAccountNumber = bankAccountNumber;
+            _bankAccount = bankAccountNumber;
         }
         public Customer() { }
     }

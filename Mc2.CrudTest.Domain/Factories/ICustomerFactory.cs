@@ -11,6 +11,6 @@ namespace Mc2.CrudTest.Domain.Factories
     public interface ICustomerFactory
     {
         Customer Create(CustomerId id, CustomerFirstName name,CustomerLastName lastName,CustomerDateOfBirth dateOfBirth,
-            CustomerPhoneNumber phoneNumber, CustomerEmail email, CustomerBankAccountNumber bankAccountNumber);
+            CustomerPhoneNumber phoneNumber, CustomerEmail email, CustomerBankAccount bankAccountNumber);
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Mc2.CrudTest.Domain.ValueObjects
 {
-    public record CustomerBankAccountNumber
+    public record CustomerBankAccount
     {
         public string Value { get; }
 
-        public CustomerBankAccountNumber(string value)
+        public CustomerBankAccount(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
             {
@@ -22,10 +22,10 @@ namespace Mc2.CrudTest.Domain.ValueObjects
         }
 
 
-        public static implicit operator string(CustomerBankAccountNumber accountNumber)
+        public static implicit operator string(CustomerBankAccount accountNumber)
             => accountNumber.Value;
 
-        public static implicit operator CustomerBankAccountNumber(string accountNumber)
+        public static implicit operator CustomerBankAccount(string accountNumber)
             => new(accountNumber);
     }
 }
