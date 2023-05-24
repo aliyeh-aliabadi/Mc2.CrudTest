@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Mc2.CrudTest.Shared.Commands;
+using Mc2.CrudTest.Domain.Factories;
 
 namespace Mc2.CrudTest.Application
 {
@@ -8,6 +9,7 @@ namespace Mc2.CrudTest.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddCommands();
+            services.AddSingleton<ICustomerFactory, CustomerFactory>();
 
             return services;
         }

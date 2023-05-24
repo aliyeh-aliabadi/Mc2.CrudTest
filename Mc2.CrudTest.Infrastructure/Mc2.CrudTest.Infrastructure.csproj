@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Mc2.CrudTest.Shared.Abstractions\Mc2.CrudTest.Shared.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EF\Migrations\" />
+  </ItemGroup>
+
 </Project>
